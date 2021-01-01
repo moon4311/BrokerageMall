@@ -1,7 +1,7 @@
 /**
  * @version 3.2.0.1
  */
-package injnsobang.com.util;
+package mall.com.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

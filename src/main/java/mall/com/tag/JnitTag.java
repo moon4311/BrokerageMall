@@ -1,7 +1,7 @@
 /**
  * @version 3.2.0.1
  */
-package injnsobang.com.tag;
+package mall.com.tag;
 
 import java.util.Date;
 import java.util.List;

@@ -1,4 +1,4 @@
-package injnsobang.com.enums;
+package mall.com.enums;
 
 /**
  * 공통코드 관련 테이블 조회용 코드

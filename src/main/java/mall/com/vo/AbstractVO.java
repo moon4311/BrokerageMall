@@ -1,4 +1,4 @@
-package injnsobang.com.vo;
+package mall.com.vo;
 
 import java.util.Date;
 
@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import injnsobang.com.util.JsonUtil;
 import lombok.Data;
+import mall.com.util.JsonUtil;
 
 /**
  *  기본 모델 클래스

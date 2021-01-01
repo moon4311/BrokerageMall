@@ -1,4 +1,4 @@
-package injnsobang.com.util;
+package mall.com.util;
 
 import org.joda.time.DateTime;
 import org.joda.time.IllegalFieldValueException;

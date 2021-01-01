@@ -1,4 +1,4 @@
-package injnsobang.com.vo;
+package mall.com.vo;
 
 import lombok.Getter;
 import lombok.Setter;

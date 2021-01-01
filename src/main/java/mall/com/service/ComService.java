@@ -1,4 +1,4 @@
-package injnsobang.com.service;
+package mall.com.service;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
 import injnsobang.com.vo.ComMbrVO;

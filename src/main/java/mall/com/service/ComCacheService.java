@@ -1,4 +1,4 @@
-package injnsobang.com.service;
+package mall.com.service;
 
 import java.util.HashMap;
 import java.util.List;

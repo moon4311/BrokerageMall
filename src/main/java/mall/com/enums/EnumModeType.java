@@ -1,4 +1,4 @@
-package injnsobang.com.enums;
+package mall.com.enums;
 
 /**
  * Mode유형

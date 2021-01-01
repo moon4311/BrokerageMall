@@ -1,4 +1,4 @@
-package injnsobang.com.service.impl;
+package mall.com.service.impl;
 
 import org.springframework.stereotype.Repository;
 

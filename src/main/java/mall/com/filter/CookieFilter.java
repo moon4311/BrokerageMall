@@ -1,4 +1,4 @@
-package injnsobang.com.filter;
+package mall.com.filter;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;

@@ -1,4 +1,4 @@
-package injnsobang.com.vo;
+package mall.com.vo;
 
 import java.io.Serializable;
 import java.util.List;

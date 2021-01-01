@@ -1,4 +1,4 @@
-package injnsobang.com.web;
+package mall.com.web;
 
 import java.util.ArrayList;
 import java.util.List;

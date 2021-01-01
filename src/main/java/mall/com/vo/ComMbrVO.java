@@ -1,8 +1,7 @@
-package injnsobang.com.vo;
+package mall.com.vo;
 
 import java.util.Date;
 
-import hrs.hr.HrsPiHrVO;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,8 +26,6 @@ public class ComMbrVO extends ComAuthGrpVO {
 	private String pswd;                     //비밀번호
 	private String mbrNm;                    //회원명
 	private String mbrIpAddr;                //회원IP주소
-	private String pstnNm;                   //직위명
-	private String deptNm;                   //부서명
 	private String confmYn;                  //승인여부
 	private String confmBgnDate;             //승인시작일자
 	private String confmEndDate;             //승인종료일자
@@ -45,34 +42,4 @@ public class ComMbrVO extends ComAuthGrpVO {
 	private String notmbrId;
 	
 
-	//인사행정시스템VO
-	private HrsPiHrVO hrsPiHrVO;
-	
-	//추가정보 (TB_MBR_R)
-	private String dptId,dptNm; //팀정보
-	private String deptCd; 		//과 정보
-	private String workStatus;	//근무정보
-	private String task;		//담당업무
-	
-	//추가데이터
-/*	private String psitnNm;//소속명
-	private String regno;//인사행정시스템의 pk 값
-	private String mrankCdNm; //계급명
-	private String rdutyName;	//직위명
-	private String workStatus;//근무상태
-	private String photoPath; //사진 경로
-	private String birthDt; //생년월일
-	
-	
-	
-	public void fillData(HrsPiHrVO hphVO) {
-		this.psitnNm = hphVO.getDeptCdNm(); //부서
-		this.mbrNm = hphVO.getName();		//성명
-		this.mrankCdNm = hphVO.getMrankCdNm();//계급명
-		this.rdutyName = hphVO.getRdutyName();//직위명
-		this.telno = hphVO.getComTelno(); //회사전화번호
-		this.birthDt = hphVO.getBirthDt();//생일
-		this.photoPath = hphVO.getPhotoPath();//사진경로
-		
-	}*/
 }

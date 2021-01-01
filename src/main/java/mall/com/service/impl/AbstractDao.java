@@ -1,4 +1,4 @@
-package injnsobang.com.service.impl;
+package mall.com.service.impl;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

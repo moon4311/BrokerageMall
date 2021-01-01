@@ -1,4 +1,4 @@
-package injnsobang.com.web;
+package mall.com.web;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;

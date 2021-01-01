@@ -1,4 +1,4 @@
-package injnsobang.com.service.impl;
+package mall.com.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;

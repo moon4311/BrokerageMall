@@ -1,4 +1,4 @@
-package injnsobang.com.util;
+package mall.com.util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
