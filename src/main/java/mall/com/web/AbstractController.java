@@ -21,20 +21,18 @@ import org.springframework.validation.ObjectError;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import egovframework.com.cmm.EgovMessageSource;
-import egovframework.com.cmm.service.EgovCmmUseService;
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
 import egovframework.rte.fdl.property.EgovPropertyService;
-import mall.com.exception.MenuAuthRequiredException;
-import mall.com.exception.MenuAuthRequiredJsonException;
-import mall.com.exception.SessionRequiredException;
-import mall.com.exception.SessionRequiredJsonException;
-import mall.com.exception.ValidationException.ERROR_TYPE;
-import mall.com.vo.ComIndvlzVO;
 import mall.admin.system.code.cde.service.CmmnDetailCodeManageService;
 import mall.admin.system.code.cde.service.CmmnDetailCodeVO;
 import mall.com.enums.EnumGrpCd;
 import mall.com.enums.EnumMenuCode;
 import mall.com.enums.EnumModeType;
+import mall.com.exception.MenuAuthRequiredException;
+import mall.com.exception.MenuAuthRequiredJsonException;
+import mall.com.exception.SessionRequiredException;
+import mall.com.exception.SessionRequiredJsonException;
+import mall.com.exception.ValidationException.ERROR_TYPE;
 import mall.com.service.ComAuthGrpService;
 import mall.com.service.ComIndvlzService;
 import mall.com.service.ComMbrLogService;
@@ -45,6 +43,7 @@ import mall.com.util.NullUtil;
 import mall.com.util.SessionUtil;
 import mall.com.vo.AbstractVO;
 import mall.com.vo.ComAuthGrpVO;
+import mall.com.vo.ComIndvlzVO;
 import mall.com.vo.ComLoginMenuVO;
 import mall.com.vo.ComMbrLogVO;
 import mall.com.vo.ComMbrVO;
@@ -79,9 +78,6 @@ public abstract class AbstractController {
 	
 	@Resource(name="comService")
 	protected ComService comService;
-	
-	@Resource(name="EgovCmmUseService")
-	private EgovCmmUseService cmmUseService;
 	
 	@Resource(name="comIndvlzService")
 	private ComIndvlzService comIndvlzService;

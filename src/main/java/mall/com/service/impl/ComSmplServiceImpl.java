@@ -7,9 +7,9 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import injnsobang.com.service.ComSmplService;
-import injnsobang.com.util.NullUtil;
-import injnsobang.com.vo.ComSmplVO;
+import mall.com.service.ComSmplService;
+import mall.com.util.NullUtil;
+import mall.com.vo.ComSmplVO;
 
 /**
  * @Class Name : ComSmplServiceImpl.java

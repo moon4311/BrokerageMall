@@ -9,8 +9,8 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Service;
 
-import injnsobang.com.service.ComCacheService;
-import injnsobang.com.vo.ComIndvlzVO;
+import mall.com.service.ComCacheService;
+import mall.com.vo.ComIndvlzVO;
 
 /**
  * @Class Name : ComCacheServiceImpl.java

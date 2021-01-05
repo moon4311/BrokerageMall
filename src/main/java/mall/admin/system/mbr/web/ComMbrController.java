@@ -13,19 +13,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import egovframework.com.cmm.service.Globals;
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
 import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
-import injnsobang.com.enums.EnumMenuCode;
-import injnsobang.com.exception.ValidatorException;
-import injnsobang.com.service.ComAuthGrpService;
-import injnsobang.com.service.ComMbrLogService;
-import injnsobang.com.service.ComMbrService;
-import injnsobang.com.util.NullUtil;
-import injnsobang.com.util.PatternUtil;
-import injnsobang.com.util.SessionUtil;
-import injnsobang.com.validator.ComLoginProcessValidator;
-import injnsobang.com.validator.ComLoginPwChangeValidator;
-import injnsobang.com.validator.ComMbrValidator;
-import injnsobang.com.vo.ComAuthGrpVO;
-import injnsobang.com.vo.ComMbrVO;
+import mall.com.enums.EnumMenuCode;
+import mall.com.exception.ValidatorException;
+import mall.com.service.ComAuthGrpService;
+import mall.com.service.ComMbrLogService;
+import mall.com.service.ComMbrService;
+import mall.com.util.NullUtil;
+import mall.com.util.PatternUtil;
+import mall.com.util.SessionUtil;
+import mall.com.validator.ComLoginProcessValidator;
+import mall.com.validator.ComLoginPwChangeValidator;
+import mall.com.validator.ComMbrValidator;
+import mall.com.vo.ComAuthGrpVO;
+import mall.com.vo.ComMbrVO;
 
 
 /**

@@ -10,10 +10,10 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import injnsobang.com.enums.EnumGrpCd;
-import injnsobang.com.service.ComCacheService;
-import injnsobang.com.util.JsonUtil;
-import injnsobang.com.vo.ComIndvlzVO;
+import mall.com.enums.EnumGrpCd;
+import mall.com.service.ComCacheService;
+import mall.com.util.JsonUtil;
+import mall.com.vo.ComIndvlzVO;
 
 /**
  *  공통 컨트롤러 클래스

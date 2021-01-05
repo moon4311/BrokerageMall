@@ -1,4 +1,4 @@
-package egovframework.com.ccm.ccc.web;
+package mall.admin.system.code.ccc.web;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -10,15 +10,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import egovframework.com.cmm.EgovMessageSource;
-import egovframework.com.ccm.ccc.service.CmmnClCodeManageService;
-import egovframework.com.ccm.ccc.service.CmmnClCodeVO;
-import egovframework.com.ccm.ccc.validator.CmmnClCodeManageValidator;
+import mall.admin.system.code.ccc.service.CmmnClCodeManageService;
+import mall.admin.system.code.ccc.service.CmmnClCodeVO;
+import mall.admin.system.code.ccc.validator.CmmnClCodeManageValidator;
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
 import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
-import injnsobang.com.enums.EnumMenuCode;
-import injnsobang.com.exception.ValidatorException;
-import injnsobang.com.util.NullUtil;
-import injnsobang.com.web.AbstractController;
+import mall.com.enums.EnumMenuCode;
+import mall.com.util.NullUtil;
+import mall.com.web.AbstractController;
 
 /**
  *

@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Service;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import injnsobang.com.service.ComMbrLogService;
-import injnsobang.com.vo.ComMbrLogVO;
+import mall.com.service.ComMbrLogService;
+import mall.com.vo.ComMbrLogVO;
 
 /**
  * @Class Name : ComMbrLogServiceImpl.java

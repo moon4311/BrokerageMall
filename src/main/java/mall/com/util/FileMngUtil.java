@@ -26,7 +26,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import egovframework.com.cmm.EgovWebUtil;
 import egovframework.com.cmm.service.Globals;
-import injnsobang.com.vo.ComFileVO;
+import mall.com.vo.ComFileVO;
 
 
 /**

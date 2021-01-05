@@ -12,19 +12,17 @@ import org.springframework.stereotype.Service;
 import egovframework.com.cmm.service.Globals;
 import egovframework.com.utl.fcc.service.EgovStringUtil;
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import hrs.hr.HrsPiHrVO;
-import hrs.hr.service.impl.HrsPiHrDao;
-import injnsobang.com.service.ComGrpMenuAuthService;
-import injnsobang.com.service.ComIndvlzMenuAuthService;
-import injnsobang.com.service.ComMbrService;
-import injnsobang.com.service.ComMenuService;
-import injnsobang.com.util.NullUtil;
-import injnsobang.com.util.SessionUtil;
-import injnsobang.com.vo.ComGrpMenuAuthVO;
-import injnsobang.com.vo.ComIndvlzMenuAuthVO;
-import injnsobang.com.vo.ComLoginMenuVO;
-import injnsobang.com.vo.ComMbrVO;
-import injnsobang.com.vo.ComMenuVO;
+import mall.com.service.ComGrpMenuAuthService;
+import mall.com.service.ComIndvlzMenuAuthService;
+import mall.com.service.ComMbrService;
+import mall.com.service.ComMenuService;
+import mall.com.util.NullUtil;
+import mall.com.util.SessionUtil;
+import mall.com.vo.ComGrpMenuAuthVO;
+import mall.com.vo.ComIndvlzMenuAuthVO;
+import mall.com.vo.ComLoginMenuVO;
+import mall.com.vo.ComMbrVO;
+import mall.com.vo.ComMenuVO;
 
 /**
  * @Class Name : ComMbrServiceImpl.java
@@ -42,8 +40,6 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 	
 	@Resource(name = "comMbrDao")
 	private ComMbrDao comMbrDao;
-	@Resource(name="hrsPiHrDao")
-    private HrsPiHrDao hrsPiHrDao;
 	@Resource(name = "comMenuService")
 	private ComMenuService comMenuService;
 	@Resource(name = "comGrpMenuAuthService")

@@ -1,4 +1,4 @@
-package egovframework.com.ccm.cca.service;
+package mall.admin.system.code.cca.service;
 
 import java.util.List;
 

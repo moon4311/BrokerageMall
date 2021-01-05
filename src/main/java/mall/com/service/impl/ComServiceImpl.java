@@ -5,11 +5,11 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import injnsobang.com.service.ComMbrLogService;
-import injnsobang.com.service.ComService;
-import injnsobang.com.util.SpringHelperUtil;
-import injnsobang.com.vo.ComMbrLogVO;
-import injnsobang.com.vo.ComMbrVO;
+import mall.com.service.ComMbrLogService;
+import mall.com.service.ComService;
+import mall.com.util.SpringHelperUtil;
+import mall.com.vo.ComMbrLogVO;
+import mall.com.vo.ComMbrVO;
 
 /**
  *  공통기능 ServiceImpl 클래스

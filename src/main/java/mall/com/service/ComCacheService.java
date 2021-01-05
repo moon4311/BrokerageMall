@@ -3,7 +3,7 @@ package mall.com.service;
 import java.util.HashMap;
 import java.util.List;
 
-import injnsobang.com.vo.ComIndvlzVO;
+import mall.com.vo.ComIndvlzVO;
 
 /**
  * @Class Name : ComCacheService.java

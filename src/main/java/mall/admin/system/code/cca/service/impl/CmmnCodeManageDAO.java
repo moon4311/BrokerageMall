@@ -1,11 +1,11 @@
-package egovframework.com.ccm.cca.service.impl;
+package mall.admin.system.code.cca.service.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import egovframework.com.ccm.cca.service.CmmnCodeVO;
-import injnsobang.com.service.impl.AbstractDao;
+import mall.admin.system.code.cca.service.CmmnCodeVO;
+import mall.com.service.impl.AbstractDao;
 
 /**
 *

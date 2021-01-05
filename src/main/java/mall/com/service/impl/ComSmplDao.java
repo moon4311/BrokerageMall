@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import injnsobang.com.vo.ComSmplVO;
+import mall.com.vo.ComSmplVO;
 
 /**
  * @Class Name : ComSmplDAO.java

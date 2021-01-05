@@ -1,13 +1,12 @@
-package egovframework.com.ccm.cca.validator;
+package mall.admin.system.code.cca.validator;
 
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
-import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import egovframework.com.ccm.cca.service.CmmnCodeVO;
-import injnsobang.com.validator.AbstractValidator;
-import injnsobang.psnn.vo.PsnnSmplVO;
+import mall.admin.system.code.cca.service.CmmnCodeVO;
+import mall.com.validator.AbstractValidator;
+import mall.psnn.vo.PsnnSmplVO;
 
 /**
  * @Class Name : CmmnCodeManageValidator.java

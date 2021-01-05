@@ -1,10 +1,10 @@
-package egovframework.com.ccm.cca.service;
+package mall.admin.system.code.cca.service;
 
 import java.io.Serializable;
 
-import injnsobang.com.vo.AbstractVO;
 import lombok.Getter;
 import lombok.Setter;
+import mall.com.vo.AbstractVO;
 
 /**
 *

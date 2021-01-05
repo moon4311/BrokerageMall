@@ -8,10 +8,10 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import injnsobang.com.util.StringUtil;
-import injnsobang.com.util.UrlUtil;
-import injnsobang.com.util.WebUtil;
-import injnsobang.com.vo.ComIndvlzVO;
+import mall.com.util.StringUtil;
+import mall.com.util.UrlUtil;
+import mall.com.util.WebUtil;
+import mall.com.vo.ComIndvlzVO;
 
 public class JnitTag{
 

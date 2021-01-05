@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import injnsobang.com.vo.ComGrpMenuAuthVO;
+import mall.com.vo.ComGrpMenuAuthVO;
 
 /**
  * @Class Name : ComGrpMenuAuthDao.java

@@ -10,15 +10,15 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import injnsobang.com.exception.ValidationException;
-import injnsobang.com.exception.ValidationException.ERROR_TYPE;
-import injnsobang.com.service.ComMbrService;
-import injnsobang.com.util.NullUtil;
-import injnsobang.com.util.SessionUtil;
-import injnsobang.com.util.SpringHelperUtil;
-import injnsobang.com.vo.ComMbrVO;
-import injnsobang.com.vo.AbstractVO;
-import injnsobang.com.web.AbstractController;
+import mall.com.exception.ValidationException;
+import mall.com.exception.ValidationException.ERROR_TYPE;
+import mall.com.service.ComMbrService;
+import mall.com.util.NullUtil;
+import mall.com.util.SessionUtil;
+import mall.com.util.SpringHelperUtil;
+import mall.com.vo.ComMbrVO;
+import mall.com.vo.AbstractVO;
+import mall.com.web.AbstractController;
 
 /**
  *  기본 ServiceImpl 클래스

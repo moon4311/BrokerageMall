@@ -8,11 +8,11 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import injnsobang.com.enums.EnumGrpCd;
-import injnsobang.com.service.ComCacheService;
-import injnsobang.com.service.ComIndvlzService;
-import injnsobang.com.util.NullUtil;
-import injnsobang.com.vo.ComIndvlzVO;
+import mall.com.enums.EnumGrpCd;
+import mall.com.service.ComCacheService;
+import mall.com.service.ComIndvlzService;
+import mall.com.util.NullUtil;
+import mall.com.vo.ComIndvlzVO;
 
 /**
  * @Class Name : ComIndvlzServiceImpl.java

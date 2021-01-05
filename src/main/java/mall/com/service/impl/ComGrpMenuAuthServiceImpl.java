@@ -8,9 +8,9 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import injnsobang.com.service.ComGrpMenuAuthService;
-import injnsobang.com.vo.ComGrpMenuAuthChngVO;
-import injnsobang.com.vo.ComGrpMenuAuthVO;
+import mall.com.service.ComGrpMenuAuthService;
+import mall.com.vo.ComGrpMenuAuthChngVO;
+import mall.com.vo.ComGrpMenuAuthVO;
 
 /**
  * @Class Name : ComGrpMenuAuthServiceImpl.java

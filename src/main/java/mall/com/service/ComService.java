@@ -1,7 +1,7 @@
 package mall.com.service;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import injnsobang.com.vo.ComMbrVO;
+import mall.com.vo.ComMbrVO;
 
 
 

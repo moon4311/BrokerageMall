@@ -3,7 +3,7 @@ package mall.com.service;
 import java.util.List;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import injnsobang.com.vo.ComAuthGrpVO;
+import mall.com.vo.ComAuthGrpVO;
 
 /**
  * @Class Name : ComAuthGrpService.java

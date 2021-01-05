@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
 import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
-import injnsobang.com.enums.EnumMenuCode;
-import injnsobang.com.exception.ValidatorException;
-import injnsobang.com.service.ComGrpService;
-import injnsobang.com.service.ComIndvlzService;
-import injnsobang.com.util.NullUtil;
-import injnsobang.com.validator.ComIndvlzValidator;
-import injnsobang.com.vo.ComGrpVO;
-import injnsobang.com.vo.ComIndvlzVO;
+import mall.com.enums.EnumMenuCode;
+import mall.com.exception.ValidatorException;
+import mall.com.service.ComGrpService;
+import mall.com.service.ComIndvlzService;
+import mall.com.util.NullUtil;
+import mall.com.validator.ComIndvlzValidator;
+import mall.com.vo.ComGrpVO;
+import mall.com.vo.ComIndvlzVO;
 
 
 /**

@@ -4,9 +4,9 @@ import java.util.UUID;
 
 import egovframework.com.cmm.service.Globals;
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import injnsobang.com.util.DatasecretUtil;
-import injnsobang.com.util.NullUtil;
-import injnsobang.com.vo.ComFileVO;
+import mall.com.util.DatasecretUtil;
+import mall.com.util.NullUtil;
+import mall.com.vo.ComFileVO;
 
 public class FileViewSecretUtil {
 

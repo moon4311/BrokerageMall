@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
-import injnsobang.com.enums.EnumMenuCode;
-import injnsobang.com.service.ComAuthGrpService;
-import injnsobang.com.service.ComMbrLogService;
-import injnsobang.com.service.ComMenuService;
-import injnsobang.com.util.NullUtil;
-import injnsobang.com.vo.ComIndvlzVO;
-import injnsobang.com.vo.ComMbrLogVO;
-import injnsobang.com.vo.ComMenuVO;
+import mall.com.enums.EnumMenuCode;
+import mall.com.service.ComAuthGrpService;
+import mall.com.service.ComMbrLogService;
+import mall.com.service.ComMenuService;
+import mall.com.util.NullUtil;
+import mall.com.vo.ComIndvlzVO;
+import mall.com.vo.ComMbrLogVO;
+import mall.com.vo.ComMenuVO;
 
 
 /**

@@ -63,7 +63,7 @@ public class EgovImageProcessController extends HttpServlet {
     public void getImageInf(ModelMap model, @ModelAttribute("searchVO")	FileVO searchVO, HttpServletResponse response) throws Exception {
 
 	
-		FileVO fvo = fileService.selectFileInf(vo);
+		FileVO fvo = fileService.selectFileInf(searchVO);
 		
 //		EqmFileVO  fvo = eqmFileService.select(searchVO);
 		//String fileLoaction = fvo.getFileStreCours() + fvo.getStreFileNm();

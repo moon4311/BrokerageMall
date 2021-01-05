@@ -1,4 +1,4 @@
-package egovframework.com.ccm.cde.web;
+package mall.admin.system.code.cde.web;
 
 import java.util.List;
 
@@ -11,20 +11,20 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import egovframework.com.ccm.cca.service.CmmnCodeManageService;
-import egovframework.com.ccm.cca.service.CmmnCodeVO;
+import mall.admin.system.code.cca.service.CmmnCodeManageService;
+import mall.admin.system.code.cca.service.CmmnCodeVO;
 import egovframework.com.cmm.EgovMessageSource;
-import egovframework.com.ccm.ccc.service.CmmnClCodeManageService;
-import egovframework.com.ccm.ccc.service.CmmnClCodeVO;
-import egovframework.com.ccm.cde.service.CmmnDetailCodeManageService;
-import egovframework.com.ccm.cde.service.CmmnDetailCodeVO;
-import egovframework.com.ccm.cde.validator.CmmnDetailCodeManageValidator;
+import mall.admin.system.code.ccc.service.CmmnClCodeManageService;
+import mall.admin.system.code.ccc.service.CmmnClCodeVO;
+import mall.admin.system.code.cde.service.CmmnDetailCodeManageService;
+import mall.admin.system.code.cde.service.CmmnDetailCodeVO;
+import mall.admin.system.code.cde.validator.CmmnDetailCodeManageValidator;
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
 import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
-import injnsobang.com.enums.EnumMenuCode;
-import injnsobang.com.exception.ValidatorException;
-import injnsobang.com.util.NullUtil;
-import injnsobang.com.web.AbstractController;
+import mall.com.enums.EnumMenuCode;
+import mall.com.exception.ValidatorException;
+import mall.com.util.NullUtil;
+import mall.com.web.AbstractController;
 
 /**
 *

@@ -11,7 +11,6 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.TimeZone;
 
-import com.ibm.icu.util.ChineseCalendar;
 
 /**
  *
@@ -530,90 +529,6 @@ public class EgovDateUtil {
 
 		// 랜덤문자열를 리턴
 		return randomDate;
-	}
-
-	/**
-	 * 입력받은 양력일자를 변환하여 음력일자로 반환
-	 * @param sDate 양력일자
-	 * @return 음력일자
-	 */
-	public static Map<String, String> toLunar(String sDate) {
-		String dateStr = validChkDate(sDate);
-
-		Map<String, String> hm = new HashMap<String, String>();
-		hm.put("day", "");
-		hm.put("leap", "0");
-
-		if (dateStr.length() != 8) {
-			return hm;
-		}
-
-		Calendar cal;
-		ChineseCalendar lcal;
-
-		cal = Calendar.getInstance();
-		lcal = new ChineseCalendar();
-
-		cal.set(Calendar.YEAR, Integer.parseInt(dateStr.substring(0, 4)));
-		cal.set(Calendar.MONTH, Integer.parseInt(dateStr.substring(4, 6)) - 1);
-		cal.set(Calendar.DAY_OF_MONTH, Integer.parseInt(dateStr.substring(6, 8)));
-
-		lcal.setTimeInMillis(cal.getTimeInMillis());
-
-		String year = String.valueOf(lcal.get(ChineseCalendar.EXTENDED_YEAR) - 2637);
-		String month = String.valueOf(lcal.get(ChineseCalendar.MONTH) + 1);
-		String day = String.valueOf(lcal.get(ChineseCalendar.DAY_OF_MONTH));
-		String leap = String.valueOf(lcal.get(ChineseCalendar.IS_LEAP_MONTH));
-
-		String pad4Str = "0000";
-		String pad2Str = "00";
-
-		String retYear = (pad4Str + year).substring(year.length());
-		String retMonth = (pad2Str + month).substring(month.length());
-		String retDay = (pad2Str + day).substring(day.length());
-
-		String SDay = retYear + retMonth + retDay;
-
-		hm.put("day", SDay);
-		hm.put("leap", leap);
-
-		return hm;
-	}
-
-	/**
-	 * 입력받은 음력일자를 변환하여 양력일자로 반환
-	 * @param sDate 음력일자
-	 * @param iLeapMonth 음력윤달여부(IS_LEAP_MONTH)
-	 * @return 양력일자
-	 */
-	public static String toSolar(String sDate, int iLeapMonth) {
-		String dateStr = validChkDate(sDate);
-
-		Calendar cal;
-		ChineseCalendar lcal;
-
-		cal = Calendar.getInstance();
-		lcal = new ChineseCalendar();
-
-		lcal.set(ChineseCalendar.EXTENDED_YEAR, Integer.parseInt(dateStr.substring(0, 4)) + 2637);
-		lcal.set(ChineseCalendar.MONTH, Integer.parseInt(dateStr.substring(4, 6)) - 1);
-		lcal.set(ChineseCalendar.DAY_OF_MONTH, Integer.parseInt(dateStr.substring(6, 8)));
-		lcal.set(ChineseCalendar.IS_LEAP_MONTH, iLeapMonth);
-
-		cal.setTimeInMillis(lcal.getTimeInMillis());
-
-		String year = String.valueOf(cal.get(Calendar.YEAR));
-		String month = String.valueOf(cal.get(Calendar.MONTH) + 1);
-		String day = String.valueOf(cal.get(Calendar.DAY_OF_MONTH));
-
-		String pad4Str = "0000";
-		String pad2Str = "00";
-
-		String retYear = (pad4Str + year).substring(year.length());
-		String retMonth = (pad2Str + month).substring(month.length());
-		String retDay = (pad2Str + day).substring(day.length());
-
-		return retYear + retMonth + retDay;
 	}
 
 	/**

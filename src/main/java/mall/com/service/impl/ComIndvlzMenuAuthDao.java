@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import injnsobang.com.vo.ComIndvlzMenuAuthVO;
+import mall.com.vo.ComIndvlzMenuAuthVO;
 
 /**
  * @Class Name : ComIndvlzMenuAuthDao.java

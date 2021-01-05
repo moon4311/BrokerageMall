@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import injnsobang.com.vo.ComMbrVO;
+import mall.com.vo.ComMbrVO;
 
 /**
  * @Class Name : ComMbrDao.java

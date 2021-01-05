@@ -1,8 +1,8 @@
-package egovframework.com.ccm.cde.service;
+package mall.admin.system.code.cde.service;
 
 import java.io.Serializable;
 
-import injnsobang.com.vo.AbstractVO;
+import mall.com.vo.AbstractVO;
 import lombok.Getter;
 import lombok.Setter;
 

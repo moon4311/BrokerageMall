@@ -7,9 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import injnsobang.com.enums.EnumMenuCode;
-import injnsobang.com.service.ComCacheService;
-import injnsobang.com.service.ComMbrService;
+import mall.com.enums.EnumMenuCode;
+import mall.com.service.ComCacheService;
+import mall.com.service.ComMbrService;
 
 /**
  *  메인페이지 클래스

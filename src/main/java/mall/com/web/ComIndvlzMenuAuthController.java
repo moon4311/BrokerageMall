@@ -13,18 +13,18 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import injnsobang.com.enums.EnumMenuCode;
-import injnsobang.com.exception.ValidatorException;
-import injnsobang.com.service.ComAuthGrpService;
-import injnsobang.com.service.ComIndvlzMenuAuthService;
-import injnsobang.com.service.ComMbrService;
-import injnsobang.com.service.ComMenuService;
-import injnsobang.com.util.NullUtil;
-import injnsobang.com.validator.ComIndvlzMenuAuthValidator;
-import injnsobang.com.vo.ComAuthGrpVO;
-import injnsobang.com.vo.ComIndvlzMenuAuthVO;
-import injnsobang.com.vo.ComMbrVO;
-import injnsobang.com.vo.ComMenuVO;
+import mall.com.enums.EnumMenuCode;
+import mall.com.exception.ValidatorException;
+import mall.com.service.ComAuthGrpService;
+import mall.com.service.ComIndvlzMenuAuthService;
+import mall.com.service.ComMbrService;
+import mall.com.service.ComMenuService;
+import mall.com.util.NullUtil;
+import mall.com.validator.ComIndvlzMenuAuthValidator;
+import mall.com.vo.ComAuthGrpVO;
+import mall.com.vo.ComIndvlzMenuAuthVO;
+import mall.com.vo.ComMbrVO;
+import mall.com.vo.ComMenuVO;
 
 
 /**

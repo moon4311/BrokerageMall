@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import injnsobang.com.vo.ComMenuVO;
+import mall.com.vo.ComMenuVO;
 
 /**
  * @Class Name : ComMenuDao.java

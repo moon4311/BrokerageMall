@@ -7,9 +7,9 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import injnsobang.com.service.ComMenuService;
-import injnsobang.com.util.NullUtil;
-import injnsobang.com.vo.ComMenuVO;
+import mall.com.service.ComMenuService;
+import mall.com.util.NullUtil;
+import mall.com.vo.ComMenuVO;
 
 /**
  * @Class Name : ComMenuServiceImpl.java

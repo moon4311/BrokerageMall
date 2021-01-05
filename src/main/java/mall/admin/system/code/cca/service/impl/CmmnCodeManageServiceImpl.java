@@ -1,4 +1,4 @@
-package egovframework.com.ccm.cca.service.impl;
+package mall.admin.system.code.cca.service.impl;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import egovframework.com.ccm.cca.service.CmmnCodeManageService;
-import egovframework.com.ccm.cca.service.CmmnCodeVO;
-import injnsobang.com.service.impl.AbstractServiceImpl;
+import mall.admin.system.code.cca.service.CmmnCodeManageService;
+import mall.admin.system.code.cca.service.CmmnCodeVO;
+import mall.com.service.impl.AbstractServiceImpl;
 
 /**
 *

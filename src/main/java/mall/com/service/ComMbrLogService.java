@@ -5,7 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import injnsobang.com.vo.ComMbrLogVO;
+import mall.com.vo.ComMbrLogVO;
 
 /**
  * @Class Name : ComMbrLogService.java
