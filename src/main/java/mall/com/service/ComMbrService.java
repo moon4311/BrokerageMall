@@ -71,12 +71,6 @@ public interface ComMbrService {
 	ComMbrVO selectComMbr(ComMbrVO searchVO);
 
 	/**
-	 * 추가정보
-	 * @param searchVO
-	 * @return
-	 */
-	ComMbrVO selectAppend(ComMbrVO searchVO);
-	/**
 	 * 추가/수정
 	 * 
 	 * @param searchVO
@@ -84,8 +78,6 @@ public interface ComMbrService {
 	 */
 	void writeComMbr(ComMbrVO searchVO) throws EgovBizException;
 
-	
-	void changeStatus(ComMbrVO searchVO);
 	
 	/**
 	 * 삭제

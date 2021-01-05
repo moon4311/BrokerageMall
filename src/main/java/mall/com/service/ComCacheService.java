@@ -1,9 +1,6 @@
 package mall.com.service;
 
 import java.util.HashMap;
-import java.util.List;
-
-import mall.com.vo.ComIndvlzVO;
 
 /**
  * @Class Name : ComCacheService.java
@@ -24,7 +21,7 @@ public interface ComCacheService {
 	//개별코드 리로드(db에서 데이터 가져와서 캐시에 저장)
 	public void reloadIndvlzList();
 	//개별코드 리스트 가져오기(캐시에서)
-	public List<ComIndvlzVO> getAllIndvlzList();
+//	public List<ComIndvlzVO> getAllIndvlzList();
 	
 	//캐시 전체 데이터 리턴
 	public HashMap<ENUM_CACHE_KEY, Object> getData();

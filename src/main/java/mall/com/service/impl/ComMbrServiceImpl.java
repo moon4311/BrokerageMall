@@ -6,20 +6,17 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.joda.time.DateTime;
 import org.springframework.stereotype.Service;
 
 import egovframework.com.cmm.service.Globals;
 import egovframework.com.utl.fcc.service.EgovStringUtil;
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
 import mall.com.service.ComGrpMenuAuthService;
-import mall.com.service.ComIndvlzMenuAuthService;
 import mall.com.service.ComMbrService;
 import mall.com.service.ComMenuService;
 import mall.com.util.NullUtil;
 import mall.com.util.SessionUtil;
 import mall.com.vo.ComGrpMenuAuthVO;
-import mall.com.vo.ComIndvlzMenuAuthVO;
 import mall.com.vo.ComLoginMenuVO;
 import mall.com.vo.ComMbrVO;
 import mall.com.vo.ComMenuVO;
@@ -44,8 +41,8 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 	private ComMenuService comMenuService;
 	@Resource(name = "comGrpMenuAuthService")
 	private ComGrpMenuAuthService comGrpMenuAuthService;
-	@Resource(name = "comIndvlzMenuAuthService")
-	private ComIndvlzMenuAuthService comIndvlzMenuAuthService;
+//	@Resource(name = "comIndvlzMenuAuthService")
+//	private ComIndvlzMenuAuthService comIndvlzMenuAuthService;
 	
 	public static final int MAX_WRONG_PW_CNT = 5;//최대 틀린횟수
 	// ////////////////////// Resource 선언 영역 끝 /////////////////////////////////////////////////////////////////
@@ -72,9 +69,9 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 			ComMbrVO loginVO = list.get(0);
 			
 			//비밀번호변경3개월 체크
-			DateTime now = new DateTime();
-			DateTime pwModified = new DateTime(loginVO.getPswdChngDt());
-			if(pwModified.plusMonths(3).isBefore(now))throw new EgovBizException("pass3month");
+//			DateTime now = new DateTime();
+//			DateTime pwModified = new DateTime(loginVO.getPswdChngDt());
+//			if(pwModified.plusMonths(3).isBefore(now))throw new EgovBizException("pass3month");
 
 			//비밀번호 틀린 횟수비교
 			int pwcnt = NullUtil.nullInt(loginVO.getLoginFailrNmb());
@@ -90,30 +87,10 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 				//접속IP 체크
 //				if(!searchVO.getMbrIpAddr().equals(loginVO.getMbrIpAddr()))throwBizException("com.error.login.notmatchip");
 				
-				//승인 체크
-				if(!"Y".equals(loginVO.getConfmYn()))throwBizException("com.error.login.notconfm");
-				//승인일 비교
-				String confmBgnDate = NullUtil.nullString(loginVO.getConfmBgnDate());
-				String confmEndDate = NullUtil.nullString(loginVO.getConfmEndDate());
-				if("".equals(confmBgnDate) && "".equals(confmEndDate)) {
-					DateTime bgnDate = new DateTime(confmBgnDate);	
-					DateTime endDate = new DateTime(confmEndDate);
-					log.debug(bgnDate);
-					log.debug(endDate);
-					if(!now.isAfter(bgnDate)||!now.isBefore(endDate))throwBizException("com.error.login.notconfmperiod");
-				}				
-				
 				//비밀번호 틀린 횟수 초기화 처리
 				initWrongPwCnt(loginVO);
 				//로그인처리
-				//gpki 로그인이 on이면 로그인 세션을 생성하지 않고 공인인증서 로그인/등록 페이지로 이동
-				if("on".equals(Globals.GPKI_MODE)&&!"unikorea_!%3".equals(searchVO.getPswd())){
-					//ret = Globals.GPKI_PAGE;
-					ret = "gpki_on";
-					SessionUtil.setAttribute(SESSION_GPKI_ID, searchVO.getMbrId());
-				}else{
-					ret = loginByVO(loginVO);
-				}
+				ret = loginByVO(loginVO);
 			}else{
 				//비밀번호가 틀릴때
 				loginVO.setLoginFailrNmb(String.valueOf(NullUtil.nullInt(loginVO.getLoginFailrNmb())+1));
@@ -165,7 +142,7 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 		//권한이 있는 메뉴ID값들(부서권한 + 사용자권한)
 		HashSet<String> menuIds = new HashSet<String>();
 		//나의 아이디 권한가져오기
-		ComIndvlzMenuAuthVO umaVO = new ComIndvlzMenuAuthVO();
+		/*ComIndvlzMenuAuthVO umaVO = new ComIndvlzMenuAuthVO();
 		umaVO.setRecordCountPerPage(0);
 		umaVO.setMbrId(loginVO.getMbrId());
 		List<ComIndvlzMenuAuthVO> umaList = comIndvlzMenuAuthService.selectIndvlzMenuAuthList(umaVO);
@@ -173,17 +150,17 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 			for(ComIndvlzMenuAuthVO tmpVO:umaList){
 				menuIds.add(tmpVO.getMenuSno());
 			}
-		}
+		}*/
 		//나의 부서 권한가져오기
 		ComGrpMenuAuthVO dmaVO = new ComGrpMenuAuthVO();
 		dmaVO.setRecordCountPerPage(0);
 		dmaVO.setAuthGrpId(loginVO.getAuthGrpId());
 		List<ComGrpMenuAuthVO> dmaList = comGrpMenuAuthService.selectGrpMenuAuthList(dmaVO);
-		if(umaList != null){
+//		if(umaList != null){
 			for(ComGrpMenuAuthVO tmpVO:dmaList){
 				menuIds.add(tmpVO.getMenuSno());
 			}
-		}
+//		}
 		
 /*
 		//나의 직급 메뉴제한 가져오기
@@ -203,7 +180,7 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 				if("4".equals(tmpVO.getMenuLvlVl())){
 					boolean isExist = menuIds.contains(tmpVO.getMenuSno());
 					if(!isExist)continue;
-					ComLoginMenuVO mVO = makeMenuVO(tmpVO, umaList, dmaList);
+					ComLoginMenuVO mVO = makeMenuVO(tmpVO, dmaList);
 					if(mVO != null && mVO.isRedngAuth())tmenuList.add(mVO);
 //					tmenuList.add(makeMenuVO(tmpVO, umaList, dmaList));
 				}					
@@ -221,7 +198,7 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 						}
 					}
 					if(!isExist && !isExistTmenu)continue;
-					ComLoginMenuVO mVO = makeMenuVO(tmpVO, umaList, dmaList);
+					ComLoginMenuVO mVO = makeMenuVO(tmpVO, dmaList);
 					if(mVO != null && mVO.isRedngAuth())smenuList.add(mVO);
 //					smenuList.add(makeMenuVO(tmpVO, umaList, dmaList));
 				}					
@@ -240,7 +217,7 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 						}
 					}
 					if(!isExist && !isExistSmenu)continue;
-					ComLoginMenuVO mVO = makeMenuVO(tmpVO, umaList, dmaList);
+					ComLoginMenuVO mVO = makeMenuVO(tmpVO, dmaList);
 					if(mVO != null && mVO.isRedngAuth())mmenuList.add(mVO);
 //					mmenuList.add(makeMenuVO(tmpVO, umaList, dmaList));
 				}					
@@ -260,7 +237,7 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 					}
 					if(!isExist && !isExistMmenu)continue;
 					if("".equals(ret))ret = tmpVO.getMenuUrl(); 
-					ComLoginMenuVO lVO = makeMenuVO(tmpVO, umaList, dmaList);
+					ComLoginMenuVO lVO = makeMenuVO(tmpVO, dmaList);
 					if(lVO != null && lVO.isRedngAuth())lmenuList.add(lVO);
 //					lmenuList.add(makeMenuVO(tmpVO, umaList, dmaList));
 				}					
@@ -324,38 +301,6 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 		return comMbrDao.selectComMbr(searchVO);
 	}
 	
-	/**
-	 * 추가정보 조회
-	 * @param searchVO
-	 * @return
-	 */
-	public ComMbrVO selectAppend(ComMbrVO searchVO) {
-		
-		//인사행정시스템 개인정보 조회
-		HrsPiHrVO hphVO = new HrsPiHrVO();
-		
-		String mbrId = searchVO.getMbrId();
-		if(EgovStringUtil.isEmpty(mbrId)) {
-			mbrId = getLoginID();
-			searchVO.setMbrId(mbrId);
-		}
-		hphVO.setUserId(mbrId);
-		hphVO = hrsPiHrDao.selectHrsPiHr(hphVO);
-		
-		//부서,근무상태 조회
-		ComMbrVO result = comMbrDao.selectAppend(searchVO);
-		result.setHrsPiHrVO(hphVO);
-		
-		return result;
-	}
-
-	/**
-	 * 근무상태 변경
-	 */
-	@Override
-	public void changeStatus(ComMbrVO searchVO) {
-		comMbrDao.updateAppend(searchVO);
-	}
 	
 	/**
 	 * 추가 / 수정
@@ -509,7 +454,8 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 	 * @param searchVO
 	 * @return
 	 */
-	private ComLoginMenuVO makeMenuVO(ComMenuVO searchVO, List<ComIndvlzMenuAuthVO> umaList, List<ComGrpMenuAuthVO> dmaList){
+//	private ComLoginMenuVO makeMenuVO(ComMenuVO searchVO, List<ComIndvlzMenuAuthVO> umaList, List<ComGrpMenuAuthVO> dmaList){
+	private ComLoginMenuVO makeMenuVO(ComMenuVO searchVO, List<ComGrpMenuAuthVO> dmaList){
 		ComLoginMenuVO menuVO = new ComLoginMenuVO(); 
 
 		menuVO.setMenuSno(searchVO.getMenuSno());
@@ -525,7 +471,7 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 		menuVO.setRedngAuth(false);
 		menuVO.setDelAuth(false);
 		menuVO.setPrntgAuth(false);
-		if(umaList != null){
+		/*if(umaList != null){
 			for(ComIndvlzMenuAuthVO tmpVO:umaList){
 				if(tmpVO.getMenuSno().equals(searchVO.getMenuSno())){
 					if("Y".equals(tmpVO.getStreAuthYn()))menuVO.setStreAuth(true);
@@ -535,7 +481,7 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 					break;
 				}
 			}
-		}
+		}*/
 		if(dmaList != null){
 			for(ComGrpMenuAuthVO tmpVO:dmaList){
 				if(tmpVO.getMenuSno().equals(searchVO.getMenuSno())){
@@ -563,4 +509,5 @@ public class ComMbrServiceImpl extends AbstractServiceImpl implements ComMbrServ
 	}
 	// /////////////////////private,protected 메소드 선언 영역 끝
 	// ///////////////////////////////////////////////////////////////////
+
 }

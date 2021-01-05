@@ -1,7 +1,6 @@
 package mall.com.service.impl;
 
 import java.util.HashMap;
-import java.util.List;
 
 import javax.annotation.Resource;
 
@@ -10,7 +9,6 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Service;
 
 import mall.com.service.ComCacheService;
-import mall.com.vo.ComIndvlzVO;
 
 /**
  * @Class Name : ComCacheServiceImpl.java
@@ -25,8 +23,8 @@ import mall.com.vo.ComIndvlzVO;
 @Service("comCacheService")
 public class ComCacheServiceImpl extends AbstractServiceImpl implements ComCacheService, ApplicationListener<ContextRefreshedEvent> {
 	// ////////////////////// Resource 선언 영역 ///////////////////////////////////////////////////////////////////
-	@Resource(name = "comIndvlzDao")
-	private ComIndvlzDao comIndvlzDao;
+//	@Resource(name = "comIndvlzDao")
+//	private ComIndvlzDao comIndvlzDao;
 
 	@Resource(name = "comEtcDao")
 	private ComEtcDao comEtcDao;
@@ -44,20 +42,9 @@ public class ComCacheServiceImpl extends AbstractServiceImpl implements ComCache
 	 * @return
 	 */
 	public void reloadIndvlzList(){
-		ComIndvlzVO searchVO = new ComIndvlzVO();
-		searchVO.setRecordCountPerPage(0);
-		setCache(ENUM_CACHE_KEY.INDVDLZ,comIndvlzDao.selectComIndvlzList(searchVO));
-	}
-	
-	/**
-	 * 개별코드 전체 가져오기
-	 * @param codeParent 상위 코드
-	 * @return
-	 */
-	@SuppressWarnings("unchecked")
-	public List<ComIndvlzVO> getAllIndvlzList(){
-		if(!isExistCache(ENUM_CACHE_KEY.INDVDLZ))reloadIndvlzList();
-		return (List<ComIndvlzVO>)getCache(ENUM_CACHE_KEY.INDVDLZ);
+//		ComIndvlzVO searchVO = new ComIndvlzVO();
+//		searchVO.setRecordCountPerPage(0);
+//		setCache(ENUM_CACHE_KEY.INDVDLZ,comIndvlzDao.selectComIndvlzList(searchVO));
 	}
 
 	// //////////////////////서비스 메소드 선언 영역 끝 ///////////////////////////////////////////////////////////////////

@@ -4,14 +4,12 @@
 package mall.com.tag;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
 import mall.com.util.StringUtil;
 import mall.com.util.UrlUtil;
 import mall.com.util.WebUtil;
-import mall.com.vo.ComIndvlzVO;
 
 public class JnitTag{
 
@@ -133,12 +131,12 @@ public class JnitTag{
      * @param cd
      * @return
      */
-    public static String getCdNm(List<ComIndvlzVO> list, String cd) {
+/*    public static String getCdNm(List<ComIndvlzVO> list, String cd) {
 		if(list != null) {
 			for(ComIndvlzVO data:list) {
 				if(data.getIndvlzCd().equals(cd))return data.getCdNm();
 			}
 		}
 		return "";
-    }
+    }*/
 }
