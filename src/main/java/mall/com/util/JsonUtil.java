@@ -4,9 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-
-import org.apache.commons.io.IOUtils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,7 +34,7 @@ public class JsonUtil {
 		return mapper.readValue(jsonString.getBytes("UTF-8"), valueType);
 	}
 	
-	public static String readFileToString(File file, String encoding) throws IOException {
+	/*public static String readFileToString(File file, String encoding) throws IOException {
         InputStream in = null;
         try {
             in = openInputStream(file);
@@ -47,7 +44,7 @@ public class JsonUtil {
         } finally {
             IOUtils.closeQuietly(in);
         }
-    }
+    }*/
 
     public static FileInputStream openInputStream(File file) throws IOException {
         if (file.exists()) {
