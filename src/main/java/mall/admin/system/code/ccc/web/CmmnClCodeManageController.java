@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import egovframework.com.cmm.EgovMessageSource;
+import egovframework.rte.fdl.cmmn.exception.EgovBizException;
+import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 import mall.admin.system.code.ccc.service.CmmnClCodeManageService;
 import mall.admin.system.code.ccc.service.CmmnClCodeVO;
 import mall.admin.system.code.ccc.validator.CmmnClCodeManageValidator;
-import egovframework.rte.fdl.cmmn.exception.EgovBizException;
-import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 import mall.com.enums.EnumMenuCode;
+import mall.com.exception.ValidatorException;
 import mall.com.util.NullUtil;
 import mall.com.web.AbstractController;
 
@@ -67,7 +68,7 @@ public class CmmnClCodeManageController extends AbstractController {
 
 		//공통 처리부		
 		if("".equals(NullUtil.nullString(searchVO.getCommMode())))searchVO.setCommMode("list");		//기본 manage로 포워딩		
-		setIndexProcess(EnumMenuCode.CCM_CCC, request, searchVO.getCommMode());			//분기공통처리
+//		setIndexProcess(EnumMenuCode.CCM_CCC, request, searchVO.getCommMode());			//분기공통처리
 		request.setAttribute(REQUEST_ACTION_URL, getPkg()+"index.do");
 		
 		StringBuilder sb = new StringBuilder("forward:");

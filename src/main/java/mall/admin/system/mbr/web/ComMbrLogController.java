@@ -1,4 +1,4 @@
-package mall.com.web;
+package mall.admin.system.mbr.web;
 
 import java.util.List;
 
@@ -16,9 +16,9 @@ import mall.com.service.ComAuthGrpService;
 import mall.com.service.ComMbrLogService;
 import mall.com.service.ComMenuService;
 import mall.com.util.NullUtil;
-import mall.com.vo.ComIndvlzVO;
 import mall.com.vo.ComMbrLogVO;
 import mall.com.vo.ComMenuVO;
+import mall.com.web.AbstractController;
 
 
 /**
@@ -56,7 +56,7 @@ public class ComMbrLogController extends AbstractController{
 
 		//공통 처리부		
 		if("".equals(NullUtil.nullString(searchVO.getCmlMode())))searchVO.setCmlMode("list");//기본 list로 포워딩		
-		setIndexProcess(EnumMenuCode.COM_SYS_MBR_LOG, request, searchVO.getCmlMode());//분기공통처리
+//		setIndexProcess(EnumMenuCode.COM_SYS_MBR_LOG, request, searchVO.getCmlMode());//분기공통처리
 		request.setAttribute(REQUEST_ACTION_URL, "/injnsobang/com/mbrLog/index.do");
 		
 		StringBuilder sb = new StringBuilder("forward:");

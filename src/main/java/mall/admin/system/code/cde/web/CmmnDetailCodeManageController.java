@@ -82,7 +82,7 @@ public class CmmnDetailCodeManageController extends AbstractController {
 
 		//공통 처리부		
 		if("".equals(NullUtil.nullString(searchVO.getCommMode())))searchVO.setCommMode("list");		//기본 manage로 포워딩		
-		setIndexProcess(EnumMenuCode.CCM_CDE, request, searchVO.getCommMode());			//분기공통처리
+//		setIndexProcess(EnumMenuCode.CCM_CDE, request, searchVO.getCommMode());			//분기공통처리
 		request.setAttribute(REQUEST_ACTION_URL, getPkg()+"index.do");
 		StringBuilder sb = new StringBuilder("forward:");
 		sb.append(getPkg()).append(searchVO.getCommMode()).append(".do");

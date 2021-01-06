@@ -48,7 +48,7 @@ public class ComMainController extends AbstractController{
 			HttpServletRequest request,
 			ModelMap model) throws Exception{
 		
-		setIndexProcess(EnumMenuCode.MAIN, request, "main");
+//		setIndexProcess(EnumMenuCode.MAIN, request, "main");
 		
 		
 		

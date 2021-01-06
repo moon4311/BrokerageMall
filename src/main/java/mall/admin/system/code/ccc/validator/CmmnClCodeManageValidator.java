@@ -7,7 +7,6 @@ import org.springframework.validation.Validator;
 
 import mall.admin.system.code.ccc.service.CmmnClCodeVO;
 import mall.com.validator.AbstractValidator;
-import mall.psnn.vo.PsnnSmplVO;
 
 /**
  * @Class Name : CmmnClCodeManageValidator.java
@@ -32,7 +31,7 @@ public class CmmnClCodeManageValidator extends AbstractValidator implements Vali
 	@Override
 	public boolean supports(final Class<?> clazz) {
 
-		return PsnnSmplVO.class.equals(clazz);
+		return false;
 	}
 
 	@Override

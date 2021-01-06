@@ -1,4 +1,4 @@
-package mall.com.web;
+package mall.admin.system.mbr.web;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -26,6 +26,7 @@ import mall.com.validator.ComLoginPwChangeValidator;
 import mall.com.validator.ComMbrValidator;
 import mall.com.vo.ComAuthGrpVO;
 import mall.com.vo.ComMbrVO;
+import mall.com.web.AbstractController;
 
 
 /**
@@ -200,7 +201,7 @@ public class ComMbrController extends AbstractController{
 
 		//공통 처리부		
 		if("".equals(NullUtil.nullString(searchVO.getCommMode())))searchVO.setCommMode("list");		//기본 list로 포워딩		
-		setIndexProcess(EnumMenuCode.COM_MBR, request, searchVO.getCommMode());				//분기공통처리
+//		setIndexProcess(EnumMenuCode.COM_MBR, request, searchVO.getCommMode());				//분기공통처리
 		request.setAttribute(REQUEST_ACTION_URL, "/injnsobang/com/mbr/index.do");
 		
 		StringBuilder sb = new StringBuilder("forward:");
